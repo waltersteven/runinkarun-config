@@ -2,9 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Para añadir solo algunos archivos css a ciertas páginas-->
-    {% block extrahead %}
-    {% endblock %}
+
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!--acá las llaves me devuelve la ruta de los estaticos-->
     <meta charset="UTF-8">
@@ -29,15 +27,15 @@
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mascotas <span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="{% url 'mascota:mascota_crear' %}">Registrar</a></li>
-                                                <li><a href="{% url 'mascota:mascota_listar' %}">Listar</a></li>
+                                                <li><a href="#">Registrar</a></li>
+                                                <li><a href="#">Listar</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Adopciones<span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="{% url 'adopcion:solicitud_crear' %}">Solicitar</a></li>
-                                                <li><a href="{% url 'adopcion:solicitud_listar' %}">Listar solicitudes</a></li>
+                                                <li><a href="#">Solicitar</a></li>
+                                                <li><a href="#">Listar solicitudes</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -48,7 +46,7 @@
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones<span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="{% url 'logout' %}">Salir</a></li>
+                                                <li><a href="#">Salir</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -60,10 +58,6 @@
             </div>
           </div>
 
-        {% endblock %}
-
-        {% block header %}
-            {% include 'base/header.html' %}
         {% endblock %}
 
         {% block content %}

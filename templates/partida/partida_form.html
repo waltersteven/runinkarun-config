@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-md-12 col-md-offset-1">
+            <div  class="col-md-6">
+                <label for="{{form.escenario.name}}">{{form.escenario.label}}</label>
+                {{form.escenario}}
+            </div>
+            <div  class="col-md-6">
+                <label for="{{form.personaje.name}}">{{form.personaje.label}}</label>
+                {{form.personaje}}
+            </div>
+        </div>
+        <div class="col-md-12 col-md-offset-1">
+            <div  class="col-md-6">
+                <label for="{{form.modo_juego.name}}">{{form.modo_juego.label}}</label>
+                {{form.modo_juego}}
+            </div>
+            <div  class="col-md-6">
+                <label for="{{form.dificultad.name}}">{{form.dificultad.label}}</label>
+                {{form.dificultad}}
+            </div>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <div class="form-group" style="margin-left: 17px; border-radius: 4px !important;">
+                <label for="{{form.speed_player.name}}">{{form.speed_player.label}}</label>
+                <div>{{form.speed_player}}</div>
+            </div>
+            <div class="form-group" style="margin-left: 17px;">
+                <label for="{{form.life.name}}">{{form.life.label}}</label>
+                <div>{{form.life}}</div>
+            </div>
+            <div class="form-group" style="margin-left: 17px; border-radius: 4px;">
+                <label for="{{form.game_time.name}}">{{form.game_time.label}}</label>
+                <div>{{form.game_time}}</div>
+            </div>
+        </div>
+        <div class="col-md-8 form-group" style="margin-left: 115px">
+                <label for="{{form.intro_background.name}}">{{form.intro_background.label}}</label>
+                {{form.intro_background}}
+        </div>
+        <div class="col-md-8 form-group" style="margin-left: 115px">
+                <label for="{{form.musica.name}}">{{form.musica.label}}</label>
+                {{form.musica}}
+        </div>
+    </div>
+
+    <div class="col-md-12" style="text-align: center; margin-top: 40px;">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+
+</form>
+
+{% endblock %}
