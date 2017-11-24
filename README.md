@@ -1,4 +1,4 @@
-# django_configapp
+# runinkarun config
 
 Activar entorno virtual:
 
