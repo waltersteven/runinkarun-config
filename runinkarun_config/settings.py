@@ -26,7 +26,7 @@ SECRET_KEY = 'nk2hz)d_huc@kx)nl7j*t-76^pv)j^qembe-)k-j^-@n=0jsp6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','mighty-river-82103.herokuapp.com']
+ALLOWED_HOSTS = ['mighty-river-82103.herokuapp.com']
 
 
 # Application definition
