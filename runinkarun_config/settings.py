@@ -26,7 +26,7 @@ SECRET_KEY = 'nk2hz)d_huc@kx)nl7j*t-76^pv)j^qembe-)k-j^-@n=0jsp6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mighty-river-82103.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','mighty-river-82103.herokuapp.com']
 
 
 # Application definition
@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'runinkarun_config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'runinkarun_config',
-        'USER': 'root',
-        'PASSWORD': 'Wltr//st2597',
-        'HOST': 'localhost',
-        'PORT': 3306,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
