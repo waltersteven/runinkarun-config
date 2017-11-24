@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'runinkarun_config.urls'
@@ -148,3 +149,5 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'wltrst97@gmail.com'  #correo de donde enviaremos emails
 EMAIL_HOST_PASSWORD = 'wltr/st97'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
