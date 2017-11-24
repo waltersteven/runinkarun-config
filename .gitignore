@@ -15,4 +15,9 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+#heroku recommendation
+venv
+*.pyc
+staticfiles
+.env
 
