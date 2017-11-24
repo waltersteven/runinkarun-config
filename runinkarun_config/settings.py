@@ -138,7 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
-LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')  #es la ruta de a donde nos vaya a llevar después de loguearse
+LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')  #es la ruta de a donde nos vaya a llevar despues de loguearse
 #para salir de sesion
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
