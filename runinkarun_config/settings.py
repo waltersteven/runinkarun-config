@@ -26,7 +26,7 @@ SECRET_KEY = 'nk2hz)d_huc@kx)nl7j*t-76^pv)j^qembe-)k-j^-@n=0jsp6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mighty-river-82103.herokuapp.com']
+ALLOWED_HOSTS = ['runinkarun.herokuapp.com']
 
 
 # Application definition
@@ -147,5 +147,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'wltrst97@gmail.com'  #correo de donde enviaremos emails
-EMAIL_HOST_PASSWORD = 'wltr/st97'
+EMAIL_HOST_PASSWORD = 'waltersteven 97'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

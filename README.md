@@ -24,3 +24,10 @@ Instalando paquetes:
 pip install djangorestframework
 
 pip install mysqclient
+
+The app is deployed in Heroku PaaS services:
+
+Url: http://runinkarun.herokuapp.com/
+
+Note:
+    - to rename app from the CLI use command: heroku apps:rename newname --app oldname
