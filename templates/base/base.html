@@ -8,7 +8,7 @@
     <title>{% block title %} Run Inka Run {% endblock %}</title>
     <script src="https://use.fontawesome.com/ea6f90f2b7.js"></script>
 </head>
-<body>
+<body class="contain-all">
     <div class="container">
         {% block navbar %}
         <!-- Navbar -->
@@ -16,7 +16,7 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="page-header">
-                  <h1 id="navbar">Run Inka Run</h1>
+                  <h1 id="navbar" style="color:black">Run Inka Run</h1>
                 </div>
                 <div class="bs-component">
                         <nav class="navbar navbar-inverse">
@@ -60,12 +60,8 @@
 
         {% block content %}
             <h4>Este es el contenido del header base</h4>
-            <p>{% static 'css/style.css' %}</p>
         {% endblock %}
-
-        {% block footer %}
-            <h4>Este es el footer del header base</h4>
-        {% endblock %}
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

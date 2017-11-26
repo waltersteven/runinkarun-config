@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'partida',
     'multiselectfield',
+    'score',
 ]
 
 MIDDLEWARE = [
