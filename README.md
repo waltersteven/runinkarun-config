@@ -21,9 +21,8 @@ Some configurations:
 
 Instalando paquetes:
 
-pip install djangorestframework
-
-pip install mysqclient
+    1) pip install djangorestframework
+    2) pip install mysqclient
 
 The app is deployed in Heroku PaaS services:
 
