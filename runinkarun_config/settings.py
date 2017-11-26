@@ -26,7 +26,7 @@ SECRET_KEY = 'nk2hz)d_huc@kx)nl7j*t-76^pv)j^qembe-)k-j^-@n=0jsp6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['runinkarun.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','runinkarun.herokuapp.com']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'partida',
     'multiselectfield',
 ]
@@ -50,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'runinkarun_config.urls'
@@ -84,9 +85,11 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES["default"].update(db_from_env)
+# Heroku Postgres database configuration
+
+# import dj_database_url
+# db_from_env = dj_database_url.config()
+# DATABASES["default"].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -125,25 +128,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)  #le indicamos donde buscar archivos estaticos
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-#
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-# STATIC_URL = '/static/'
-#
-# # Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 
 
-
-LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')  #es la ruta de a donde nos vaya a llevar despues de loguearse
-#para salir de sesion
-LOGOUT_REDIRECT_URL = reverse_lazy('login')
+# LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')  #es la ruta de a donde nos vaya a llevar despues de loguearse
+# #para salir de sesion
+# LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 #Para enviar correos
 EMAIL_USE_TLS = True

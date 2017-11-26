@@ -6,3 +6,4 @@ class PartidaSerializer(ModelSerializer):
     class Meta:
         model = Partida
         fields = '__all__'
+        # fields = ('','')

@@ -1,6 +1,5 @@
 from django.db import models
 from multiselectfield import MultiSelectField
-
 # Create your models here.
 class Partida(models.Model):
 
@@ -49,7 +48,7 @@ class Partida(models.Model):
         (EXPERTO, 'Experto'),
     )
 
-    BACKGROUND_1 = 'https://www-cdn.terminalfour.com/media/sky-night-stars-pexels.jpg'
+    BACKGROUND_1 = 'http://res.cloudinary.com/dfktnvqxe/image/upload/v1511719844/escenario_fondo_v2_ikkq4e.jpg'
     BACKGROUND_2 = 'http://www.powerpointhintergrund.com/uploads/2017/05/simple-backgrounds-wallpaper-1920x1080--47273-24.jpeg'
 
     BACKGROUND_CHOICES = (
@@ -65,11 +64,11 @@ class Partida(models.Model):
         (TRACK_2, '2do track'),
     )
 
-    escenario = MultiSelectField(choices=ESCENARIO_CHOICES)
-    personaje = MultiSelectField(choices=PERSONAJE_CHOICES)
-    modo_juego = MultiSelectField(choices=GAME_MODE_CHOICES)
-    dificultad = MultiSelectField(choices=DIFICULTAD_CHOICES)
-    intro_background = models.CharField(max_length=200, choices=BACKGROUND_CHOICES, default=BACKGROUND_1,)
+    escenario = models.CharField(max_length=200, blank = True, null = True)
+    personaje = models.CharField(max_length=200, blank = True, null = True)
+    modo_juego = models.CharField(max_length=200, blank = True, null = True)
+    dificultad = models.CharField(max_length=200, blank = True, null = True)
+    intro_background = models.CharField(max_length=250, choices=BACKGROUND_CHOICES, default=BACKGROUND_1,)
     speed_player = models.IntegerField(default=1)
     life = models.IntegerField(default=3)
     game_time = models.IntegerField(default=500)

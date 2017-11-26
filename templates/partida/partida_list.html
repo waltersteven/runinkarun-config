@@ -1,25 +1,24 @@
-{% extends 'base/base.html' %}
-
-{% block content %}
+{% extends 'base/base.html' %} {% block content %}
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <td>#</td>
-            <td>Escenario</td>
-            <td>Personaje</td>
-            <td>Modo de juego</td>
-            <td>Dificultad</td>
-            <td>Imagen de background</td>
-            <td>Velocidad de jugador</td>
-            <td>Cant. vidas</td>
-            <td>Tiempo de partida</td>
-            <td>Música</td>
+            <td style="width:3%">#</td>
+            <td style="width:9%">Escenario</td>
+            <td style="width:10%">Personaje</td>
+            <td style="width:9%">Modo de juego</td>
+            <td style="width:14%">Dificultad</td>
+            <td style="width:12%">Imagen de background</td>
+            <td style="width:8%">Velocidad de jugador</td>
+            <td style="width:7%">Cant. vidas</td>
+            <td style="width:7%">Tiempo de partida</td>
+            <td style="width:5%">Música</td>
         </tr>
     </thead>
     <tbody>
         <h1>Lista de partidas</h1>
-        {% if object_list %} <!--Verificar si hay registros en el contexto-->
+        {% if object_list %}
+        <!--Verificar si hay registros en el contexto-->
         {% for partida in object_list %}
         <tr>
             <td>{{ partida.id }}</td>
@@ -34,12 +33,12 @@
             <td>{{ partida.musica }}</td>
 
             <td>
-                <a class="btn btn-primary" href="{% url 'partida:partida_editar' partida.id %}">Editar</a> <!--redirige a name=mascota_editar, envia como parametro mascota.id-->
+                <a class="btn btn-primary" href="{% url 'partida:partida_editar' partida.id %}">Editar</a>
+                <!--redirige a name=mascota_editar, envia como parametro mascota.id-->
                 <a class="btn btn-danger" href="{% url 'partida:partida_eliminar' partida.id %}">Eliminar</a>
             </td>
         </tr>
-        {% endfor %}
-        {% else %}
+        {% endfor %} {% else %}
         <h1>No hay registros de partidas</h1>
         {% endif %}
     </tbody>
@@ -47,7 +46,8 @@
 
 <ul class="pager">
     <li>
-        {% if page_obj.has_previous %} <!--logica para preguntar si tiene pagina previa-->
+        {% if page_obj.has_previous %}
+        <!--logica para preguntar si tiene pagina previa-->
         <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
         {% endif %}
     </li>
