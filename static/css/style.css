@@ -48,16 +48,22 @@ button:hover {
     background-color: transparent;
 }
 
+.dropdown-menu > li > a{
+    color: #fff !important;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #18BC9C;
     border-color: #18BC9C;
+    margin-right: 10px;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: #149a80;
     border-color: #128f76;
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
 }
 
 .btn{
@@ -101,10 +107,17 @@ button:hover {
     background-color: #f5f5f5;
 }
 .table > thead > tr > th {
-     border-bottom: 1px solid #ddd;
-     padding-bottom: 15px !important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px !important;
+    text-align: inherit !important;
+    text-align: left;
+    line-height: normal;
 }
 
 th, td{
     text-align: center;
+}
+
+.table-bordered>thead>tr>th {
+    border: 0px;
 }
