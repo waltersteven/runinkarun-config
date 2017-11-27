@@ -31,9 +31,16 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ranking<span class="caret"></span></a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="{% url 'score:score_listar' %}">Visualizar ranking</a></li>
+                                                </ul>
+                                            </li>
+                                        <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">API REST<span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="{% url 'partida:api' %}">Visualizar API</a></li>
+                                                <li><a href="{% url 'partida:api' %}">API Partidas</a></li>
+                                                <li><a href="{% url 'score:api' %}">API Ranking</a></li>
                                             </ul>
                                         </li>
                                     </ul>

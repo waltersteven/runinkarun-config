@@ -1,13 +1,15 @@
 {% extends 'base/base.html' %}
-
+{% load staticfiles %}
 {% block title %}
     Score
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="margin-top: 20px;">
-        <div class="col-md-3 col-md-offset-3 box" style="text-align:center; background: #02b3e4; height: 400px;"><div style="margin-top: 10px;">Score de participantes</div></div>
-        <div class="col-md-3 box"  style="background: #ffffff; height: 400px; color: #525c65">
+<div class="container">
+    <h1 style="color: black; font-weight: 600;">Ranking de Jugadores</h1>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-3 box" style="text-align:center; margin-left: 250px; height: 400px; background-image:url('{% static "images/background.jpg" %}');"><div style="margin-top: 10px;">Score de participantes</div></div>
+        <div class="col-md-4 box" style="background: #fff; height: 400px; color: #525c65;">
             <div style="text-align:center; margin-top: 10px;">Ranking de jugadores</div>
             <div>
                 <table class="table">
@@ -37,4 +39,5 @@
             </div>
         </div>
     </div>
+</div>
 {% endblock %}

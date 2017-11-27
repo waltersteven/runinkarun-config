@@ -12,7 +12,7 @@ class ScoreAPI(APIView):
     serializer = ScoreSerializer
 
     def get(self, request, format=None):
-        score = Score.objects.all()
+        score = Score.objects.all().order_by("-acumScore")
         response = self.serializer(score, many=True)
         return Response(response.data)
 
@@ -26,3 +26,4 @@ class ScoreAPI(APIView):
 class ScoreList(ListView):
     model = Score
     template_name = 'score/index.html'
+    ordering = ['-acumScore']
