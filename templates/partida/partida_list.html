@@ -15,7 +15,7 @@
                     <th style="width:12%">Imagen de background</th>
                     <th style="width:8%">Velocidad de jugador</th>
                     <th style="width:7%">Cant. vidas</th>
-                    <th style="width:7%">Tiempo de partida</th>
+                    <!--<th style="width:7%">Tiempo de partida</th>-->
                     <th style="width:5%">Música</th>
                     <th></th>
                 </tr>
@@ -33,7 +33,7 @@
                     <td>{{ partida.intro_background }}</td>
                     <td>{{ partida.speed_player }}</td>
                     <td>{{ partida.life }}</td>
-                    <td>{{ partida.game_time }}</td>
+                    <!--<td>{{ partida.game_time }}</td>-->
                     <td>{{ partida.musica }}</td>        
                     <td>
                         <a class="btn btn-primary" href="{% url 'partida:partida_editar' partida.id %}">Editar</a>

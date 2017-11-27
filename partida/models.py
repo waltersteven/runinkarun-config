@@ -71,5 +71,5 @@ class Partida(models.Model):
     intro_background = models.CharField(max_length=250, choices=BACKGROUND_CHOICES, default=BACKGROUND_1,)
     speed_player = models.IntegerField(default=1)
     life = models.IntegerField(default=3)
-    game_time = models.IntegerField(default=500)
+    # game_time = models.IntegerField(default=500)
     musica = models.CharField(max_length=4, choices=TRACK_CHOICES, default=TRACK_1,)

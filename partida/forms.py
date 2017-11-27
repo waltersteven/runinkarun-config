@@ -19,7 +19,7 @@ class PartidaForm(forms.ModelForm):
             'intro_background',            
             'speed_player',
             'life',
-            'game_time', 
+            # 'game_time',
             'musica',           
         ]
 
@@ -31,7 +31,7 @@ class PartidaForm(forms.ModelForm):
             'intro_background': 'Imagen de background',            
             'speed_player': 'Velocidad del jugador',
             'life': 'Cantidad de vidas',
-            'game_time': 'Tiempo de juego (seg)',
+            # 'game_time': 'Tiempo de juego (seg)',
             'musica': 'Musica de fondo',               
         }
 
@@ -39,6 +39,6 @@ class PartidaForm(forms.ModelForm):
             'intro_background': forms.Select(attrs={'class': 'form-control'}),
             'speed_player': forms.NumberInput(attrs={'style': 'border-radius: 4px', 'min': 1, 'max':5}),
             'life': forms.NumberInput(attrs={'style': 'border-radius: 4px', 'min': 1, 'max':5}),
-            'game_time': forms.NumberInput(attrs={'style': 'border-radius: 4px', 'min': 15, 'max':100}),
+            # 'game_time': forms.NumberInput(attrs={'style': 'border-radius: 4px', 'min': 15, 'max':100}),
             'musica': forms.Select(attrs={'class': 'form-control'}),
         }
