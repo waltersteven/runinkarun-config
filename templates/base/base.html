@@ -5,19 +5,19 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!--acá las llaves me devuelve la ruta de los estaticos-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
     <title>{% block title %} Run Inka Run {% endblock %}</title>
     <script src="https://use.fontawesome.com/ea6f90f2b7.js"></script>
 </head>
 <body class="contain-all">
-    <div class="container">
         {% block navbar %}
         <!-- Navbar -->
           <div class="bs-docs-section clearfix">
             <div class="row">
               <div class="col-lg-12">
-                <div class="page-header">
-                  <h1 id="navbar" style="color:black">Run Inka Run</h1>
-                </div>
                 <div class="bs-component">
                         <nav class="navbar navbar-inverse">
                             <div class="container-fluid">
@@ -62,7 +62,6 @@
             <h4>Este es el contenido del header base</h4>
         {% endblock %}
         
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
