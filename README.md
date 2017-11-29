@@ -32,3 +32,5 @@ Note:
     -To rename app from the CLI use command: heroku apps:rename newname --app oldname
 
 App is using as database Heroku Postgres Service (PostgreSQL)
+
+QUINTANA LOVES MONGO
